@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <h1>Time Table Generator</h1>
+    <div class="parent">
+        <div class="div1">
+            <form method="POST" action="/">
+                <h2>Enter core subjects/electives</h2>
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slota"  type="text" name="A" autocomplete="off" class="input">
+                                <label for="slota" class="user-label">A</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="slotb"  type="text" name="B" autocomplete="off" class="input">
+                                <label for="slotb" class="user-label">B</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slotc"  type="text" name="C" autocomplete="off" class="input">
+                                <label for="slotc" class="user-label">C</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="slotd"  type="text" name="D" autocomplete="off" class="input">
+                                <label for="slotd" class="user-label">D</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slote"  type="text" name="E" autocomplete="off" class="input">
+                                <label for="slote" class="user-label">E</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="slotf"  type="text" name="F" autocomplete="off" class="input">
+                                <label for="slotf" class="user-label">F</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slotg"  type="text" name="G" autocomplete="off" class="input">
+                                <label for="slotg" class="user-label">G</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="sloth"  type="text" name="H" autocomplete="off" class="input">
+                                <label for="sloth" class="user-label">H</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                <h2>Enter the lab subjects</h2>    
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slotp"  type="text" name="P" autocomplete="off" class="input">
+                                <label for="slotp" class="user-label">P</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="slotq"  type="text" name="Q" autocomplete="off" class="input">
+                                <label for="slotq" class="user-label">Q</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slotr"  type="text" name="R" autocomplete="off" class="input">
+                                <label for="slotr" class="user-label">R</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="slots"  type="text" name="S" autocomplete="off" class="input">
+                                <label for="slots" class="user-label">S</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-col">
+                        <div class="col1">
+                            <div class="input-group">
+                                <input id="slott"  type="text" name="T" autocomplete="off" class="input">
+                                <label for="slott" class="user-label">T</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="input-group">
+                                <input id="shift"  type="text" name="shift" autocomplete="off" class="input" placeholder="MORNING/AFTERNOON">
+                                <label for="shift" class="user-label">Shift</label>
+                            </div>
+                        </div>
+                    </div>
+                <div class="two-col">
+                    <div class="col1">
+                        <input type="submit" value="Submit" class="submitbutton">
+                    </div>
+                    <div class="col2">
+                        <input type="reset" value="Reset" class="resetbutton">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="div2">
+            <img src="https://www.edusys.co/images/timetable-software.png" alt=""> 
+        </div>
+        
+    </div>
+    <div class="parent2">
+        <div class="div3" style="overflow-x: auto;"> 
+            <table class="tg" id="timetable" >
+                <thead>
+                  <tr class="timing">
+                    <th class=""></th>
+                    <th class="thead">8:00-8:50</th>
+                    <th class="thead">9:00-9:50</th>
+                    <th class="thead">10:00-10:50</th>
+                    <th class="thead">11:00-11:50</th>
+                    <th class="thead">12:00-12:50</th>
+                    <th class="thead">1:00-1:50</th>
+                    <th class="thead">2:00-2:50</th>
+                    <th class="thead">3:00-3:50</th>
+                    <th class="thead">4:00-4:50</th>
+                    <th class="thead">5:00-5:50</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="thead">Monday</td>
+                    {% for i in range(10) %}
+                        {% if tt['M'][i][0] %}
+                            <td style="background-color:{{ tt['M'][i][1]}};border-color:white;">{{ tt['M'][i][0]}}</td>
+                        {% else %}
+                            <td class=""></td>
+                        {% endif %}
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    <th class="thead">Tuesday</td>
+                        {% for i in range(10) %}
+                        {% if tt['T'][i][0] %}
+                            <td style="background-color:{{ tt['T'][i][1]}};border-color:white;">{{ tt['T'][i][0]}}</td>
+                        {% else %}
+                            <td class=""></td>
+                        {% endif %}
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    <th class="thead">Wednesday</td>
+                        {% for i in range(10) %}
+                        {% if tt['W'][i][0] %}
+                            <td style="background-color:{{ tt['W'][i][1]}};border-color:white;">{{ tt['W'][i][0]}}</td>
+                        {% else %}
+                            <td class=""></td>
+                        {% endif %}
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    <th class="thead">Thursday</td>
+                        {% for i in range(10) %}
+                        {% if tt['TH'][i][0] %}
+                            <td style="background-color:{{ tt['TH'][i][1]}};border-color:white;">{{ tt['TH'][i][0]}}</td>
+                        {% else %}
+                            <td class=""></td>
+                        {% endif %}
+                    {% endfor %}
+                  </tr>
+                  <tr>
+                    <th class="thead">Friday</td>
+                        {% for i in range(10) %}
+                        {% if tt['F'][i][0] %}
+                            <td style="background-color:{{ tt['F'][i][1] }};border-color:white;">{{ tt['F'][i][0]}}</td>
+                        {% else %}
+                            <td class=""></td>
+                        {% endif %}
+                    {% endfor %}
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="center" >
+        <button class="downloadbutton" id="btnExport">
+            <span class="downloadbutton_lg">
+                <span class="downloadbutton_sl"></span>
+                <span class="downloadbutton_text">Export as PDF</span>
+            </span>
+        </button>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript">
+        $("body").on("click", "#btnExport", function () {
+            html2canvas($('#timetable')[0], {
+                onrendered: function (canvas) {
+                    var data = canvas.toDataURL();
+                    var docDefinition = {
+                        content: [{
+                            image: data,
+                            width: 500
+                        }]
+                    };
+                    pdfMake.createPdf(docDefinition).download("timetable.pdf");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
